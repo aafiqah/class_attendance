@@ -376,7 +376,6 @@ public class attendance_report_t extends javax.swing.JFrame {
 
         update_btn.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
         update_btn.setText("Update Data");
-        update_btn.setEnabled(false);
         update_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 update_btnActionPerformed(evt);

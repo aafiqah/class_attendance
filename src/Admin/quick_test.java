@@ -215,7 +215,7 @@ public class quick_test extends javax.swing.JFrame {
             @Override
             public void run() 
             {
-                webSource = new VideoCapture(0);
+                webSource = new VideoCapture(1);
                 myThread = new quick_test.DaemonThread();
                 Thread t = new Thread(myThread);
                 t.setDaemon(true);

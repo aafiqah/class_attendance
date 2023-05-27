@@ -333,7 +333,7 @@ public class capture_student extends javax.swing.JFrame implements ActionListene
     }//GEN-LAST:event_startMouseClicked
 
     private void startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startActionPerformed
-        webSource = new VideoCapture(0); // video capture from default cam
+        webSource = new VideoCapture(1); // video capture from default cam
         myThread = new capture_student.DaemonThread(); //create object of Dameonthread class
         Thread t = new Thread(myThread);
         t.setDaemon(true);
