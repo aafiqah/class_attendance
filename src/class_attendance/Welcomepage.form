@@ -550,6 +550,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="emailaddressforget_text">
                   <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="emailaddressforget_textActionPerformed"/>
                     <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="emailaddressforget_textKeyPressed"/>
                   </Events>
                 </Component>

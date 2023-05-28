@@ -380,6 +380,11 @@ public class Welcomepage extends javax.swing.JFrame {
 
         jLabel10.setText("Email Address       : ");
 
+        emailaddressforget_text.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailaddressforget_textActionPerformed(evt);
+            }
+        });
         emailaddressforget_text.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 emailaddressforget_textKeyPressed(evt);
@@ -788,7 +793,7 @@ public class Welcomepage extends javax.swing.JFrame {
 
     private void search_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_search_btnActionPerformed
         String email = emailaddressforget_text.getText();
-        staffData user = null;
+        staffData user;
             
         try{
             String query = "SELECT * FROM `useraccount` WHERE `Email`=?;";
@@ -798,14 +803,17 @@ public class Welcomepage extends javax.swing.JFrame {
             pst.setString(1, email);
             rst = pst.executeQuery();
             
-            if(rst.next()){
+            if(rst.next())
+            {
                 user = new staffData();
                 user.setSecurityQuestion(rst.getString("SecurityQuestion"));
                 user.setSecurityAnswer(rst.getString("SecurityAnswer"));
                 
-                if(user == null){
-                   JOptionPane.showMessageDialog(null, "Incorrect Email","Message", JOptionPane.ERROR_MESSAGE);
-                }else{
+                if(user == null)
+                {
+                   JOptionPane.showMessageDialog(this, "Incorrect Email","Message", JOptionPane.ERROR_MESSAGE);
+                }
+                else{
                     search_btn.setEnabled(false);
                     emailaddressforget_text.setEditable(false);
                     dbAnswer = user.getSecurityAnswer();
@@ -813,7 +821,11 @@ public class Welcomepage extends javax.swing.JFrame {
                     validateFields_forget();
                 }
             }
-        }catch(Exception e){
+            else{
+                 JOptionPane.showMessageDialog(null, "Incorrect Email","Message", JOptionPane.ERROR_MESSAGE);
+                 search_btn.setEnabled(false);
+            }
+        }catch(HeadlessException | SQLException e){
             JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_search_btnActionPerformed
@@ -825,6 +837,10 @@ public class Welcomepage extends javax.swing.JFrame {
     private void newpwdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_newpwdKeyPressed
         validateFields_forget();
     }//GEN-LAST:event_newpwdKeyPressed
+
+    private void emailaddressforget_textActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailaddressforget_textActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailaddressforget_textActionPerformed
 
     /**
      * @param args the command line arguments
