@@ -510,7 +510,7 @@ public class RecognizeAttendance extends javax.swing.JFrame {
         {
             public void run()
             {
-                webSource = new VideoCapture(1); // video capture from default cam
+                webSource = new VideoCapture(0); // video capture from default cam
                 myThread = new RecognizeAttendance.DaemonThread(); //create object of Dameonthread class
                 Thread t = new Thread(myThread);
                 t.setDaemon(true);
