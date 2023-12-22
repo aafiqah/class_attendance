@@ -51,7 +51,7 @@ public class admin_portal extends javax.swing.JFrame {
 
         jLabel14.setFont(new java.awt.Font("Kristen ITC", 3, 45)); // NOI18N
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("Real-Time Face Recognition");
+        jLabel14.setText("Face Recognition");
         jLabel14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

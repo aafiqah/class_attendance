@@ -200,7 +200,7 @@
               <Font name="Kristen ITC" size="45" style="3"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Real-Time Face Recognition"/>
+            <Property name="text" type="java.lang.String" value="Face Recognition"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
           </Properties>
         </Component>
