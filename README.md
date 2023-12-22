@@ -22,7 +22,7 @@ Follow these steps to set up and run the class attendance system:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/class-attendance.git
+   git clone https://github.com/aafiqah/class-attendance.git
    cd class-attendance
    ```
 
